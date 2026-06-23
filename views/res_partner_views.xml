@@ -20,6 +20,7 @@
                 </button>
             </xpath>
             <xpath expr="//field[@name='mobile']" position="after">
+                <field name="x_whatsapp_number" placeholder="nur falls abweichend von Telefon/Mobil"/>
                 <field name="x_telegram_chat_id" placeholder="z.B. 123456789 (Chat-ID aus UMH)"/>
             </xpath>
         </field>

@@ -9,7 +9,7 @@ Connect your Odoo contacts to **[Unified Messenger Hub](https://messengerhub.de)
 
 ## What it does
 
-- **Adds a "Telegram Chat-ID" field** to every contact (`res.partner`)
+- **Adds "WhatsApp-Nummer" and "Telegram Chat-ID" fields** to every contact (`res.partner`)
 - **Two Smart Buttons** in the contact form header — WhatsApp and Telegram
 - One click opens the matching UMH conversation in a new browser tab
 - Configurable UMH instance URL under **Settings → General Settings**
@@ -30,7 +30,7 @@ Connect your Odoo contacts to **[Unified Messenger Hub](https://messengerhub.de)
 ## How it works
 
 ### WhatsApp
-Customer lookup uses the **standard phone/mobile fields** on the contact. Make sure the number is stored in a recognizable format (e.g. `+49 123 456789`).
+Customer lookup checks the dedicated `x_whatsapp_number` field first, then falls back to the **standard phone/mobile fields** on the contact. Only fill in `x_whatsapp_number` if WhatsApp runs on a different number than phone/mobile. Make sure whichever number is used is stored in a recognizable format (e.g. `+49 123 456789`).
 
 ### Telegram
 The module adds a `x_telegram_chat_id` field. The numeric Chat-ID is visible in the UMH contact profile and must be entered once per contact — it is **not** the same as the Telegram @username.

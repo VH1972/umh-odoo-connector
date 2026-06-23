@@ -10,6 +10,12 @@ DEFAULT_UMH_URL = 'https://saas.messengerhub.de'
 class ResPartner(models.Model):
     _inherit = 'res.partner'
 
+    x_whatsapp_number = fields.Char(
+        string='WhatsApp-Nummer',
+        help='Nur ausfüllen, falls WhatsApp auf einer anderen Nummer läuft als Telefon/Mobil. '
+             'Format: +49123456789',
+    )
+
     x_telegram_chat_id = fields.Char(
         string='Telegram Chat-ID',
         help='Numerische Telegram Chat-ID aus dem UMH-Kontaktprofil (z.B. 123456789). '
@@ -24,7 +30,7 @@ class ResPartner(models.Model):
 
     def action_open_umh_whatsapp(self):
         self.ensure_one()
-        phone = self.phone or self.mobile
+        phone = self.x_whatsapp_number or self.phone or self.mobile
         if not phone:
             raise UserError('Keine Telefonnummer hinterlegt — bitte zuerst Telefon oder Mobil eintragen.')
         url = f'{self._umh_base_url()}/inbox?phone={quote(phone)}'
