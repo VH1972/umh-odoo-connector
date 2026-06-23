@@ -19,7 +19,7 @@
                     </div>
                 </button>
             </xpath>
-            <xpath expr="//group[field[@name='mobile']]" position="inside">
+            <xpath expr="(//field[@name='mobile'])[1]/parent::group" position="inside">
                 <field name="x_whatsapp_number" placeholder="nur falls abweichend von Telefon/Mobil"/>
                 <field name="x_telegram_chat_id" placeholder="z.B. 123456789 (Chat-ID aus UMH)"/>
             </xpath>
