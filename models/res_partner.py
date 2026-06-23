@@ -12,8 +12,9 @@ class ResPartner(models.Model):
 
     x_whatsapp_number = fields.Char(
         string='WhatsApp-Nummer',
-        help='Nur ausfüllen, falls WhatsApp auf einer anderen Nummer läuft als Telefon/Mobil. '
-             'Format: +49123456789',
+        help='Wird für den WhatsApp-Button benötigt — auch eintragen, wenn identisch mit Telefon/Mobil. '
+             'Ohne dieses Feld kein automatischer Versand, damit nie versehentlich an eine '
+             'Festnetznummer ohne WhatsApp geschrieben wird. Format: +49123456789',
     )
 
     x_telegram_chat_id = fields.Char(
@@ -30,10 +31,13 @@ class ResPartner(models.Model):
 
     def action_open_umh_whatsapp(self):
         self.ensure_one()
-        phone = self.x_whatsapp_number or self.phone or self.mobile
-        if not phone:
-            raise UserError('Keine Telefonnummer hinterlegt — bitte zuerst Telefon oder Mobil eintragen.')
-        url = f'{self._umh_base_url()}/inbox?phone={quote(phone)}'
+        if not self.x_whatsapp_number:
+            raise UserError(
+                'Keine WhatsApp-Nummer hinterlegt — bitte zuerst eintragen (auch wenn identisch mit '
+                'Telefon/Mobil). Ohne dieses Feld kein Versand, damit nie versehentlich an eine '
+                'Festnetznummer ohne WhatsApp geschrieben wird.'
+            )
+        url = f'{self._umh_base_url()}/inbox?phone={quote(self.x_whatsapp_number)}'
         return {
             'type': 'ir.actions.act_url',
             'url': url,

@@ -30,7 +30,9 @@ Connect your Odoo contacts to **[Unified Messenger Hub](https://messengerhub.de)
 ## How it works
 
 ### WhatsApp
-Customer lookup checks the dedicated `x_whatsapp_number` field first, then falls back to the **standard phone/mobile fields** on the contact. Only fill in `x_whatsapp_number` if WhatsApp runs on a different number than phone/mobile. Make sure whichever number is used is stored in a recognizable format (e.g. `+49 123 456789`).
+- **The "Open WhatsApp" button always requires `x_whatsapp_number` to be filled in** — even if it's the same as phone/mobile. There is no fallback here on purpose: a business-initiated WhatsApp template costs money, and silently sending it to a landline number that isn't on WhatsApp means the customer never receives it while you wait for a reply that will never come.
+- **Incoming-message recognition** (the "known customer" badge in UMH, and linking new leads/quotes/tickets/orders to the right contact) is more lenient: it checks `x_whatsapp_number` first, then falls back to the standard phone/mobile fields — there's no sending risk there, only lookup.
+- Make sure whichever number is used is stored in a recognizable format (e.g. `+49 123 456789`).
 
 ### Telegram
 The module adds a `x_telegram_chat_id` field. The numeric Chat-ID is visible in the UMH contact profile and must be entered once per contact — it is **not** the same as the Telegram @username.

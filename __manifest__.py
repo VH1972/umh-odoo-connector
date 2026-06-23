@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'UMH Connector — WhatsApp & Telegram',
-    'version': '17.0.1.1.0',
+    'version': '17.0.1.2.0',
     'category': 'Sales/CRM',
     'summary': 'WhatsApp & Telegram Nachrichten direkt aus der Kundenkarte via Unified Messenger Hub',
     'description': """
@@ -14,7 +14,9 @@ Funktionen
 ----------
 - Legt automatisch die Felder "WhatsApp-Nummer" und "Telegram Chat-ID" auf Kontakten an
 - Zwei Smart-Buttons (WhatsApp, Telegram) öffnen die passende Konversation in UMH
-- WhatsApp-Erkennung nutzt zuerst die dedizierte WhatsApp-Nummer, sonst Telefon/Mobil
+- WhatsApp-Button erfordert zwingend die dedizierte WhatsApp-Nummer (kein Fallback —
+  verhindert versehentlichen, kostenpflichtigen Versand an Festnetznummern ohne WhatsApp)
+- Eingehende Kundenerkennung bleibt großzügiger: WhatsApp-Nummer zuerst, sonst Telefon/Mobil
 - UMH-URL einmalig unter Einstellungen → Allgemeine Einstellungen konfigurierbar
 """,
     'author': 'Vitalij Haun IT HUB',

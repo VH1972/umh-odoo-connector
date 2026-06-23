@@ -21,7 +21,7 @@
             </xpath>
             <xpath expr="//notebook[1]" position="before">
                 <group string="UMH Messenger">
-                    <field name="x_whatsapp_number" placeholder="nur falls abweichend von Telefon/Mobil"/>
+                    <field name="x_whatsapp_number" placeholder="z.B. +49123456789 (auch wenn identisch mit Telefon)"/>
                     <field name="x_telegram_chat_id" placeholder="z.B. 123456789 (Chat-ID aus UMH)"/>
                 </group>
             </xpath>
