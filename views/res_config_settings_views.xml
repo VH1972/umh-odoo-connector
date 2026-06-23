@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_umh_connector" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.umh.connector</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//app[@name='general_settings']" position="inside">
+                <block title="UMH Connector" name="umh_connector_setting_container">
+                    <setting id="umh_connector_url_setting" string="UMH Connector"
+                             help="URL Ihrer Unified Messenger Hub Instanz">
+                        <field name="umh_connector_url" placeholder="https://saas.messengerhub.de"/>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+</odoo>
