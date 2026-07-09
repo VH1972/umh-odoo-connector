@@ -7,15 +7,6 @@
   </div>
 </section>
 
-<section class="oe_container">
-  <div class="oe_row oe_spaced">
-    <div class="oe_span12 text-center">
-      <img class="oe_picture oe_screenshot" src="banner.jpg"
-           alt="UMH Connector - WhatsApp and Telegram for Odoo"/>
-    </div>
-  </div>
-</section>
-
 <section class="oe_container oe_dark">
   <div class="oe_row oe_spaced">
     <div class="oe_span12 text-center">
@@ -31,31 +22,50 @@
 
 <section class="oe_container">
   <div class="oe_row oe_spaced">
-    <div class="oe_span4 text-center">
-      <i class="fa fa-whatsapp" style="font-size:48px; color:#22c55e;"></i>
-      <h4>WhatsApp Smart Button</h4>
-      <p>
-        One click on the WhatsApp button opens the customer chat in
-        Unified Messenger Hub. Uses a dedicated WhatsApp number field -
-        no accidental fallback to landlines that would waste Meta template fees.
-      </p>
+    <div class="oe_span12">
+      <h3 class="text-center" style="margin-bottom:24px;">What Unified Messenger Hub offers</h3>
     </div>
-    <div class="oe_span4 text-center">
-      <i class="fa fa-telegram" style="font-size:48px; color:#0088cc;"></i>
-      <h4>Telegram Smart Button</h4>
-      <p>
-        For customers connected via Telegram, the button opens their chat
-        using the stored Telegram Chat ID - without leaving the contact form.
-      </p>
+    <div class="oe_span3 text-center">
+      <i class="fa fa-inbox" style="font-size:36px; color:#22c55e;"></i>
+      <h4>Unified Inbox</h4>
+      <p>WhatsApp &amp; Telegram messages in one shared inbox — no app switching.</p>
     </div>
-    <div class="oe_span4 text-center">
-      <i class="fa fa-cog" style="font-size:48px; color:#6366f1;"></i>
-      <h4>Central URL Setting</h4>
-      <p>
-        Configure your UMH instance URL once under
-        Settings &gt; UMH Connector - it applies to all users
-        across the entire Odoo instance.
-      </p>
+    <div class="oe_span3 text-center">
+      <i class="fa fa-users" style="font-size:36px; color:#0088cc;"></i>
+      <h4>Team Collaboration</h4>
+      <p>Assign and take over conversations. Each agent sees their own queue.</p>
+    </div>
+    <div class="oe_span3 text-center">
+      <i class="fa fa-database" style="font-size:36px; color:#6366f1;"></i>
+      <h4>ERP Integration</h4>
+      <p>Connect Odoo or Dolibarr. Identify customers, create leads and quotes directly from chat.</p>
+    </div>
+    <div class="oe_span3 text-center">
+      <i class="fa fa-reply" style="font-size:36px; color:#f59e0b;"></i>
+      <h4>Quick Reply Templates</h4>
+      <p>Save frequently used texts as templates and insert them with one click.</p>
+    </div>
+  </div>
+  <div class="oe_row oe_spaced">
+    <div class="oe_span3 text-center">
+      <i class="fa fa-clock-o" style="font-size:36px; color:#ec4899;"></i>
+      <h4>Absence Auto-Responder</h4>
+      <p>Automatic replies outside business hours — configurable per channel.</p>
+    </div>
+    <div class="oe_span3 text-center">
+      <i class="fa fa-paperclip" style="font-size:36px; color:#14b8a6;"></i>
+      <h4>File &amp; Image Sending</h4>
+      <p>Send JPG, PNG and PDF files directly from the chat window.</p>
+    </div>
+    <div class="oe_span3 text-center">
+      <i class="fa fa-tasks" style="font-size:36px; color:#f97316;"></i>
+      <h4>Status Workflow</h4>
+      <p>Track conversations through Open, In Progress, Quote Sent and Closed stages.</p>
+    </div>
+    <div class="oe_span3 text-center">
+      <i class="fa fa-bell" style="font-size:36px; color:#a855f7;"></i>
+      <h4>Real-Time Notifications</h4>
+      <p>Browser and OS notifications so no incoming message goes unnoticed.</p>
     </div>
   </div>
 </section>
@@ -63,14 +73,17 @@
 <section class="oe_container oe_dark">
   <div class="oe_row oe_spaced">
     <div class="oe_span6">
-      <h3>New Fields on Contacts</h3>
+      <h3>What this module adds to Odoo</h3>
       <ul style="font-size:15px; line-height:2;">
-        <li><strong>WhatsApp Number</strong> - dedicated field, separate from Phone / Mobile</li>
-        <li><strong>Telegram Chat ID</strong> - numeric ID from the UMH contact profile</li>
+        <li><strong>WhatsApp Smart Button</strong> - opens the customer chat in UMH with one click</li>
+        <li><strong>Telegram Smart Button</strong> - same for Telegram, using the stored Chat ID</li>
+        <li><strong>WhatsApp Number field</strong> - dedicated field, separate from Phone / Mobile</li>
+        <li><strong>Telegram Chat ID field</strong> - numeric ID from the UMH contact profile</li>
+        <li><strong>Central URL setting</strong> - configure your UMH instance once for all users</li>
       </ul>
       <p style="font-size:13px; color:#888;">
-        The separate WhatsApp field prevents paid Meta templates from being
-        sent to landline numbers that have no WhatsApp account.
+        The dedicated WhatsApp field prevents paid Meta templates from being
+        sent to landlines without WhatsApp.
       </p>
     </div>
     <div class="oe_span6">
@@ -80,25 +93,18 @@
         <li>A running Unified Messenger Hub instance (messengerhub.de)</li>
         <li>WhatsApp Business API or Telegram bot configured in UMH</li>
       </ul>
-    </div>
-  </div>
-</section>
-
-<section class="oe_container">
-  <div class="oe_row oe_spaced">
-    <div class="oe_span12 text-center">
-      <h3>Installation</h3>
-      <ol style="text-align:left; max-width:580px; margin:0 auto; font-size:15px; line-height:2.2;">
-        <li>Install the module in Odoo (Technical mode &gt; Apps)</li>
-        <li>Go to <strong>Settings &gt; UMH Connector</strong> and enter your UMH instance URL</li>
-        <li>Open any customer contact and fill in the <strong>WhatsApp Number</strong> and/or <strong>Telegram Chat ID</strong></li>
-        <li>The Smart Buttons appear automatically at the top of the contact form</li>
+      <h3 style="margin-top:16px;">Installation</h3>
+      <ol style="font-size:15px; line-height:2;">
+        <li>Install this module in Odoo</li>
+        <li>Go to <strong>Settings &gt; UMH Connector</strong> and enter your UMH URL</li>
+        <li>Add the WhatsApp Number / Telegram Chat ID on customer contacts</li>
+        <li>Smart Buttons appear automatically on the contact form</li>
       </ol>
     </div>
   </div>
 </section>
 
-<section class="oe_container oe_dark">
+<section class="oe_container">
   <div class="oe_row oe_spaced">
     <div class="oe_span12 text-center">
       <p style="font-size:13px; color:#aaa;">
