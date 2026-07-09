@@ -1,23 +1,30 @@
 <section class="oe_container">
   <div class="oe_row oe_spaced">
     <div class="oe_span12 text-center">
-      <img src="banner.png" alt="UMH Connector – WhatsApp &amp; Telegram for Odoo"
-           style="max-width:100%; border-radius:8px; margin-bottom:24px;"/>
       <h2 class="oe_slogan" style="color:#22c55e;">UMH Connector</h2>
-      <h3 class="oe_slogan">WhatsApp &amp; Telegram direkt in Odoo — ohne Umwege</h3>
+      <h3 class="oe_slogan">WhatsApp &amp; Telegram directly inside Odoo</h3>
+    </div>
+  </div>
+</section>
+
+<section class="oe_container">
+  <div class="oe_row oe_spaced">
+    <div class="oe_span12 text-center">
+      <img class="oe_screenshot" src="banner.png"
+           alt="UMH Connector – WhatsApp and Telegram for Odoo"
+           style="max-width:100%; border-radius:8px;"/>
     </div>
   </div>
 </section>
 
 <section class="oe_container oe_dark">
   <div class="oe_row oe_spaced">
-    <div class="oe_span12">
-      <h3 class="oe_slogan">Was dieser Connector macht</h3>
-      <p style="font-size:16px; text-align:center; max-width:800px; margin:0 auto 24px;">
-        Der UMH Connector verbindet Odoo mit dem
-        <strong>Unified Messenger Hub</strong> — Ihrer zentralen Plattform für
-        WhatsApp-Business-API und Telegram. Aus jedem Kundenkontakt heraus
-        können Sie in einem Klick den passenden Chat öffnen.
+    <div class="oe_span12 text-center">
+      <p style="font-size:16px; max-width:800px; margin:0 auto 16px;">
+        The UMH Connector links Odoo with your
+        <strong>Unified Messenger Hub</strong> instance — the central platform
+        for WhatsApp Business API and Telegram bots. Open the right chat
+        conversation directly from any customer contact with a single click.
       </p>
     </div>
   </div>
@@ -29,26 +36,26 @@
       <i class="fa fa-whatsapp" style="font-size:48px; color:#22c55e;"></i>
       <h4>WhatsApp Smart Button</h4>
       <p>
-        Ein Klick auf den WhatsApp-Button öffnet direkt den Chat mit diesem
-        Kunden im Unified Messenger Hub. Funktioniert nur mit einer dedizierten
-        WhatsApp-Nummer im Kundenstamm — kein gefährlicher Fallback auf
-        Festnetznummern.
+        One click on the WhatsApp button opens the customer's chat in
+        Unified Messenger Hub. Uses a dedicated WhatsApp number field —
+        no accidental fallback to landlines that would waste Meta template fees.
       </p>
     </div>
     <div class="oe_span4 text-center">
       <i class="fa fa-telegram" style="font-size:48px; color:#0088cc;"></i>
       <h4>Telegram Smart Button</h4>
       <p>
-        Für Kunden mit Telegram-Anbindung öffnet der Telegram-Button den Chat
-        anhand der hinterlegten Chat-ID — direkt aus dem Kontaktformular heraus.
+        For customers connected via Telegram, the button opens their chat
+        using the stored Telegram Chat ID — without leaving the contact form.
       </p>
     </div>
     <div class="oe_span4 text-center">
       <i class="fa fa-cog" style="font-size:48px; color:#6366f1;"></i>
-      <h4>Zentraler URL-Einstellung</h4>
+      <h4>Central URL Setting</h4>
       <p>
-        Die UMH-Instanz-URL wird einmalig unter <em>Einstellungen → UMH
-        Connector</em> hinterlegt und gilt für alle Benutzer des Systems.
+        Configure your UMH instance URL once under
+        <em>Settings &rarr; UMH Connector</em> — it applies to all users
+        across the entire Odoo instance.
       </p>
     </div>
   </div>
@@ -57,22 +64,22 @@
 <section class="oe_container oe_dark">
   <div class="oe_row oe_spaced">
     <div class="oe_span6">
-      <h3>Neue Felder im Kundenstamm</h3>
-      <ul style="font-size:15px; line-height:1.9;">
-        <li><strong>WhatsApp-Nummer</strong> — dediziertes Feld (getrennt von Telefon/Mobil)</li>
-        <li><strong>Telegram Chat-ID</strong> — numerische ID aus dem UMH-Kontaktprofil</li>
+      <h3>New Fields on Contacts</h3>
+      <ul style="font-size:15px; line-height:2;">
+        <li><strong>WhatsApp Number</strong> — dedicated field, separate from Phone / Mobile</li>
+        <li><strong>Telegram Chat ID</strong> — numeric ID from the UMH contact profile</li>
       </ul>
-      <p style="font-size:14px; color:#888;">
-        Durch das dedizierte WhatsApp-Feld wird zuverlässig verhindert, dass
-        kostenpflichtige Meta-Templates an Festnetznummern ohne WhatsApp gesendet werden.
+      <p style="font-size:13px; color:#888;">
+        The separate WhatsApp field prevents paid Meta templates from being
+        sent to landline numbers that have no WhatsApp account.
       </p>
     </div>
     <div class="oe_span6">
-      <h3>Voraussetzungen</h3>
-      <ul style="font-size:15px; line-height:1.9;">
-        <li>Odoo 17 Community oder Enterprise</li>
-        <li>Laufende <a href="https://messengerhub.de">Unified Messenger Hub</a>-Instanz</li>
-        <li>WhatsApp Business API oder Telegram-Bot im UMH konfiguriert</li>
+      <h3>Requirements</h3>
+      <ul style="font-size:15px; line-height:2;">
+        <li>Odoo 17 Community or Enterprise</li>
+        <li>A running <a href="https://messengerhub.de">Unified Messenger Hub</a> instance</li>
+        <li>WhatsApp Business API or Telegram bot configured in UMH</li>
       </ul>
     </div>
   </div>
@@ -81,12 +88,12 @@
 <section class="oe_container">
   <div class="oe_row oe_spaced">
     <div class="oe_span12 text-center">
-      <h3 class="oe_slogan">Installation</h3>
-      <ol style="text-align:left; max-width:600px; margin:0 auto; font-size:15px; line-height:2;">
-        <li>Modul in Odoo installieren (Technischer Modus → Apps)</li>
-        <li>Unter <strong>Einstellungen → UMH Connector</strong> die URL Ihrer UMH-Instanz eintragen</li>
-        <li>Im Kundenstamm die <strong>WhatsApp-Nummer</strong> und/oder <strong>Telegram Chat-ID</strong> eintragen</li>
-        <li>Die Smart Buttons erscheinen automatisch oben im Kontaktformular</li>
+      <h3>Installation</h3>
+      <ol style="text-align:left; max-width:580px; margin:0 auto; font-size:15px; line-height:2.2;">
+        <li>Install the module in Odoo (Technical mode &rarr; Apps)</li>
+        <li>Go to <strong>Settings &rarr; UMH Connector</strong> and enter your UMH instance URL</li>
+        <li>Open any customer contact and fill in the <strong>WhatsApp Number</strong> and/or <strong>Telegram Chat ID</strong></li>
+        <li>The Smart Buttons appear automatically at the top of the contact form</li>
       </ol>
     </div>
   </div>
@@ -95,10 +102,10 @@
 <section class="oe_container oe_dark">
   <div class="oe_row oe_spaced">
     <div class="oe_span12 text-center">
-      <p style="font-size:14px; color:#aaa;">
-        <strong>Unified Messenger Hub</strong> ·
-        <a href="https://messengerhub.de">messengerhub.de</a> ·
-        Open Source (GPL-3) ·
+      <p style="font-size:13px; color:#aaa;">
+        <strong>Unified Messenger Hub</strong> &nbsp;&middot;&nbsp;
+        <a href="https://messengerhub.de">messengerhub.de</a> &nbsp;&middot;&nbsp;
+        Open Source &mdash; GPL-3 &nbsp;&middot;&nbsp;
         <a href="https://github.com/VH1972/umh-odoo-connector">GitHub</a>
       </p>
     </div>
